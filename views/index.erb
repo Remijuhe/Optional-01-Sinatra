@@ -1,0 +1,9 @@
+<h1>Mes recettes</h1>
+<ul>
+<% @recipes.each do |recipe| %>
+    <b><%= recipe.name %></b>
+    <li><%= recipe.description.gsub(/Etape\s\d/, "\n") %></li>
+    <b><%= "Difficulté : "+recipe.difficulty+" /   Temps de préparation : "+recipe.prep_time%></b></br></br>
+<% end %>
+</ul>
+<a href="/new.erb">Create</a>
